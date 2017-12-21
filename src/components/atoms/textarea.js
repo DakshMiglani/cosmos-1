@@ -10,27 +10,28 @@ const StyledTextArea = styled.textarea`
   box-sizing: border-box;
   padding: ${spacing.xsmall} ${spacing.small};
 
-  background: ${colors.white};
+  background: ${colors.input.background};
   box-shadow: none;
 
-  border: 1px solid ${colors.grayLight};
+  border: 1px solid ${colors.input.border};
   border-radius: ${misc.radius};
 
   font-family: ${props => (props.code ? fonts.family.code : 'inherit')};
-  transition: border-color ${misc.animationDuration}, box-shadow ${misc.animationDuration};
+  transition: border-color ${misc.animationDuration},
+    box-shadow ${misc.animationDuration};
 
   resize: ${props => (props.resize ? 'vertical' : 'none')};
 
   &:hover {
-    border-color: ${colors.grayMedium};
+    border-color: ${colors.input.borderHover};
   }
   &:focus {
-    border-color: ${colors.blue};
-    box-shadow: 0px 0px 0 1px ${colors.blue};
+    border-color: ${colors.input.borderFocus};
+    box-shadow: 0px 0px 0 1px ${colors.input.borderFocus};
     outline: none;
   }
   &::-webkit-input-placeholder {
-    color: ${colors.grayMedium};
+    color: ${colors.input.placeholder};
   }
 `
 
