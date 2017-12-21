@@ -42,7 +42,7 @@ const Divider = styled(Label)`
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: ${fonts.weight.medium};
-  border-bottom: 1px solid ${colors.base.grayLight};
+  border-bottom: 1px solid ${colors.text.form.divider};
   padding-bottom: ${spacing.xsmall};
   margin-bottom: ${spacing.xlarge};
 `
@@ -70,7 +70,7 @@ const StyledActions = styled.div`
   padding-left: ${labelWidth}px;
   height: 100px;
   margin-top: ${spacing.xlarge};
-  border-top: 1px solid ${colors.base.grayLight};
+  border-top: 1px solid ${colors.text.form.divider};
   padding-top: ${spacing.medium};
 `
 
