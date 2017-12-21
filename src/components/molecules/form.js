@@ -17,6 +17,7 @@ const Label = styled.label`
   font-weight: ${fonts.weight.medium};
   text-align: right;
   padding-top: 10px;
+  color: ${colors.input.label};
 `
 
 const Description = styled.div`
@@ -42,9 +43,10 @@ const Divider = styled(Label)`
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: ${fonts.weight.medium};
-  border-bottom: 1px solid ${colors.text.form.divider};
+  border-bottom: 1px solid ${colors.form.divider};
   padding-bottom: ${spacing.xsmall};
   margin-bottom: ${spacing.xlarge};
+  color: ${colors.form.title};
 `
 
 // Layout
@@ -70,7 +72,7 @@ const StyledActions = styled.div`
   padding-left: ${labelWidth}px;
   height: 100px;
   margin-top: ${spacing.xlarge};
-  border-top: 1px solid ${colors.text.form.divider};
+  border-top: 1px solid ${colors.form.divider};
   padding-top: ${spacing.medium};
 `
 
