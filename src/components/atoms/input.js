@@ -6,24 +6,24 @@ import { colors, fonts, spacing, misc } from '../../tokens/'
 
 const config = {
   basic: {
-    background: colors.white,
-    border: colors.grayLight,
-    hoverBorder: colors.grayMedium,
-    focusBorder: colors.blue,
-    placeholder: colors.grayMedium
+    background: colors.input.background,
+    border: colors.input.border,
+    hoverBorder: colors.input.borderHover,
+    focusBorder: colors.input.borderFocus,
+    placeholder: colors.input.placeholder
   },
   readOnly: {
-    background: colors.grayLightest,
-    border: colors.grayLight,
-    hoverBorder: colors.grayMedium,
-    focusBorder: colors.grayMedium,
-    placeholder: colors.base
+    background: colors.input.backgroundReadOnly,
+    border: colors.input.border,
+    hoverBorder: colors.input.border,
+    focusBorder: colors.input.border,
+    placeholder: colors.input.placeholderReadOnly
   },
   error: {
-    background: colors.white,
-    border: colors.orange,
-    hoverBorder: colors.orange,
-    focusBorder: colors.blue
+    background: colors.input.background,
+    border: colors.input.borderError,
+    hoverBorder: colors.input.borderError,
+    focusBorder: colors.input.borderError
   }
 }
 
@@ -47,7 +47,8 @@ const StyledInput = styled.input`
   padding: ${spacing.xsmall} ${spacing.small};
 
   cursor: ${props => (props.readOnly ? 'not-allowed' : 'auto')};
-  transition: border-color ${misc.animationDuration}, box-shadow ${misc.animationDuration};
+  transition: border-color ${misc.animationDuration},
+    box-shadow ${misc.animationDuration};
 
   &:hover {
     border-color: ${props => getAttributes(props).hoverBorder};
