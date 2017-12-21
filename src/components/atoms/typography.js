@@ -62,34 +62,34 @@ injectGlobal`
 
 const Heading1 = styled.h1`
   margin: 0; /* reset browser default */
-  color: ${colors.base};
+  color: ${colors.text.default};
   font-size: 48px;
   font-weight: ${fonts.weight.medium};
 `
 
 const Heading2 = styled.h2`
   margin: 0; /* reset browser default */
-  color: ${colors.base};
+  color: ${colors.text.default};
   font-size: 36px;
   font-weight: ${fonts.weight.medium};
 `
 
 const Heading3 = styled.h3`
   margin: 0; /* reset browser default */
-  color: ${colors.base};
+  color: ${colors.text.default};
   font-size: 28px;
   font-weight: ${fonts.weight.medium};
 `
 
 const Subheader = styled.h6`
   margin: 0; /* reset browser default */
-  color: ${colors.grayDark};
+  color: ${colors.text.subHeader};
   font-size: 13px;
   font-weight: ${fonts.weight.medium};
 `
 
 const Text = styled.span`
-  color: ${colors.base};
+  color: ${colors.text.default};
   font-size: 14px;
   font-weight: ${fonts.weight.normal};
 `
