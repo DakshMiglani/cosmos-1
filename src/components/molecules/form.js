@@ -21,13 +21,13 @@ const Label = styled.label`
 
 const Description = styled.div`
   font-size: 13px;
-  color: ${colors.grayMedium};
+  color: ${colors.text.helper};
   margin-top: ${spacing.xsmall};
 `
 
 const Error = styled.div`
   font-size: 13px;
-  color: ${colors.orange};
+  color: ${colors.text.error};
   margin-top: ${spacing.xsmall};
 `
 
@@ -42,7 +42,7 @@ const Divider = styled(Label)`
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: ${fonts.weight.medium};
-  border-bottom: 1px solid ${colors.grayLight};
+  border-bottom: 1px solid ${colors.base.grayLight};
   padding-bottom: ${spacing.xsmall};
   margin-bottom: ${spacing.xlarge};
 `
@@ -70,7 +70,7 @@ const StyledActions = styled.div`
   padding-left: ${labelWidth}px;
   height: 100px;
   margin-top: ${spacing.xlarge};
-  border-top: 1px solid ${colors.grayLight};
+  border-top: 1px solid ${colors.base.grayLight};
   padding-top: ${spacing.medium};
 `
 
@@ -106,13 +106,17 @@ const FormElement = props => {
       <ContentLayout>
         <props.fieldComponent id={id} {...props} />
         {props.error ? <Error>{props.error}</Error> : null}
-        {props.description ? <Description>{props.description}</Description> : null}
+        {props.description ? (
+          <Description>{props.description}</Description>
+        ) : null}
       </ContentLayout>
     </Field>
   )
 }
 
-Form.TextInput = props => <FormElement {...props} fieldComponent={ActionInput} />
+Form.TextInput = props => (
+  <FormElement {...props} fieldComponent={ActionInput} />
+)
 Form.TextArea = props => <FormElement {...props} fieldComponent={TextArea} />
 Form.Select = props => <FormElement {...props} fieldComponent={Select} />
 Form.Switch = props => <FormElement {...props} fieldComponent={Switch} />
